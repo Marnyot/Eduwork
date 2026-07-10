@@ -4,108 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Mario Valentino Ardhana</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Section 1: Menu -->
-    <table border="0" width="100%" cellpadding="10">
-        <tr>
-            <td align="left">Brand</td>
-            <td align="right">
-                <a href="#home">Header</a>
-                <a href="#biodata">Biodata</a>
-                <a href="#portofolio">Portofolio</a>
-            </td>
-        </tr>
-    </table>
-
-    <hr size="2" width="100%" noshade>
+    <header class="navbar">
+        <div class="brand">Brand</div>
+        <nav>
+            <a href="#home">Header</a>
+            <a href="#biodata">Biodata</a>
+            <a href="#portofolio">Portofolio</a>
+        </nav>
+    </header>
 
     <!-- Section 2: Judul kiri, gambar kanan -->
-    <table border="0" width="100%" cellpadding="10">
-        <tr>
-            <td width="50%" valign="top">
-                <h1>Selamat Datang di Website Saya</h1>
-                <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-                <button>Pelajari Lebih Lanjut</button>
-            </td>
-            <td width="50%" align="center">
-                <img src="https://i.pinimg.com/1200x/3a/23/67/3a23672dc5c6cefc74da1e93ed7677f5.jpg" alt="Foto Profil" width="600" height="400">
-            </td>
-        </tr>
-    </table>
-
-    <hr size="2" width="100%" noshade>
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+            <button>Pelajari Lebih Lanjut</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/1200x/3a/23/67/3a23672dc5c6cefc74da1e93ed7677f5.jpg" alt="Foto Profil">
+        </div>
+    </section>
 
     <!-- Section 3: Biodata 6 box -->
-    <table border="0" width="100%" id="biodata">
-        <tr>
-            <td align="center">
-                <h2>About Me</h2>
-                <p>A brief introduction about myself</p>
-            </td>
-        </tr>
-    </table>
+    <section class="biodata" id="biodata">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>A brief introduction about myself</p>
+        </div>
 
-    <table border="1" width="100%" cellspacing="10" cellpadding="10">
-        <tr>
-            <td width="33%" align="center">
-                <strong>Full Name</strong><br>
-                Mario Valentino Ardhana
-            </td>
-            <td width="33%" align="center">
-                <strong>Education</strong><br>
-                S1 Informatika - Universitas Sebelas Maret
-            </td>
-            <td width="33%" align="center">
-                <strong>Pekerjaan</strong><br>
-                Mahasiswa
-            </td>
-        </tr>
-        <tr>
-            <td width="33%" align="center">
-                <strong>Contact</strong><br>
-                marioardhana37@gmail.com
-            </td>
-            <td width="33%" align="center">
-                <strong>Hobi</strong><br>
-                Eksplorasi
-            </td>
-            <td width="33%" align="center">
-                <strong>Alamat</strong><br>
-                Surakarta, Jawa Tengah
-            </td>
-        </tr>
-    </table>
-
-    <hr size="2" width="100%" noshade>
+        <div class="card-grid">
+            <div class="card">
+                <strong>Full Name</strong>
+                <span>Mario Valentino Ardhana</span>
+            </div>
+            <div class="card">
+                <strong>Education</strong>
+                <span>S1 Informatika - Universitas Sebelas Maret</span>
+            </div>
+            <div class="card">
+                <strong>Pekerjaan</strong>
+                <span>Mahasiswa</span>
+            </div>
+            <div class="card">
+                <strong>Contact</strong>
+                <span>marioardhana37@gmail.com</span>
+            </div>
+            <div class="card">
+                <strong>Hobi</strong>
+                <span>Eksplorasi</span>
+            </div>
+            <div class="card">
+                <strong>Alamat</strong>
+                <span>Surakarta, Jawa Tengah</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Section 4: Portofolio -->
-    <table border="0" width="100%" id="portofolio">
-        <tr>
-            <td align="center"><h2>Portofolio</h2></td>
-        </tr>
-    </table>
+    <section class="portofolio" id="portofolio">
+        <div class="section-title">
+            <h2>Portofolio</h2>
+        </div>
 
-    <table border="1" width="100%" cellspacing="10" cellpadding="10">
-        <tr>
-            <td width="33%" align="center">
-                <img src="https://i.pinimg.com/1200x/05/37/6c/05376ca1a3c5184ad0b3fbf03fac418c.jpg" alt="Proyek 1" width="350" height="200"><br>
-                <strong>Proyek 1</strong><br>
-                Deskripsi proyek 1.
-            </td>
-            <td width="33%" align="center">
-                <img src="https://i.pinimg.com/736x/8b/89/19/8b891903d157ae09a32e3cc2ac643ab1.jpg" alt="Proyek 2" width="350" height="200"><br>
-                <strong>Proyek 2</strong><br>
-                Deskripsi proyek 2.
-            </td>
-            <td width="33%" align="center">
-                <img src="https://i.pinimg.com/1200x/e6/21/5e/e6215e09a9a3a6bffa5eabf973b6acb4.jpg" alt="Proyek 3" width="350" height="200"><br>
-                <strong>Proyek 3</strong><br>
-                Deskripsi proyek 3.
-            </td>
-        </tr>
-    </table>
+        <div class="card-grid portofolio-grid">
+            <div class="portofolio-card">
+                <img src="https://i.pinimg.com/1200x/05/37/6c/05376ca1a3c5184ad0b3fbf03fac418c.jpg" alt="Proyek 1">
+                <strong>Proyek 1</strong>
+                <p>Deskripsi proyek 1.</p>
+            </div>
+            <div class="portofolio-card">
+                <img src="https://i.pinimg.com/736x/8b/89/19/8b891903d157ae09a32e3cc2ac643ab1.jpg" alt="Proyek 2">
+                <strong>Proyek 2</strong>
+                <p>Deskripsi proyek 2.</p>
+            </div>
+            <div class="portofolio-card">
+                <img src="https://i.pinimg.com/1200x/e6/21/5e/e6215e09a9a3a6bffa5eabf973b6acb4.jpg" alt="Proyek 3">
+                <strong>Proyek 3</strong>
+                <p>Deskripsi proyek 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mario Valentino Ardhana. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
