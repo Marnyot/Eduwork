@@ -20,10 +20,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto gap-lg-4">
+                <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portofolio">My Projects</a></li>
+                    <li class="nav-item">
+                        <a class="btn-cv" href="assets/cv-mario-valentino-ardhana.pdf" download>Download CV</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -37,12 +40,12 @@
                     <h1 class="hero-mega">
                         <span class="mega-fill">
                             Web
-                            <span class="mega-icon" aria-hidden="true">
+                            <a class="mega-icon" href="#biodata" aria-label="Scroll ke Biodata">
                                 <svg viewBox="0 0 24 24" width="0.32em" height="0.32em" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <line x1="7" y1="17" x2="17" y2="7" stroke="currentColor" stroke-width="1.6"/>
                                     <polyline points="9 7 17 7 17 15" fill="none" stroke="currentColor" stroke-width="1.6"/>
                                 </svg>
-                            </span>
+                            </a>
                         </span>
                         <span class="mega-outline">Developer</span>
                     </h1>
@@ -51,8 +54,8 @@
 
                     <div class="hero-footer">
                         <p class="hero-text-p">Full-Stack Developer & Informatics Student at UNS, passionate about building thoughtful web experiences.</p>
-                        <button type="button" class="btn btn-dark-flat" data-bs-toggle="modal" data-bs-target="#aboutModal">
-                            Learn More
+                        <button type="button" class="btn btn-dark-flat" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Contact Me
                         </button>
                     </div>
                 </div>
@@ -120,46 +123,69 @@
                 <h2>My Projects</h2>
             </div>
 
-            <div class="row g-3 g-md-4">
-                <div class="col-md-4">
-                    <div class="portofolio-card">
-                        <img src="https://i.pinimg.com/1200x/05/37/6c/05376ca1a3c5184ad0b3fbf03fac418c.jpg" class="portofolio-img" alt="Project 1">
-                        <div class="portofolio-body">
-                            <span class="tag tag-blue">React, TypeScript, Tailwind CSS, Golang</span>
-                            <strong class="portofolio-title">Sistem Presensi dan Admin Dashboard Apotek Asasi</strong>
-                            <p class="portofolio-desc">A comprehensive attendance system and admin dashboard for a pharmacy business.</p>
-                            <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal1">
-                                View Detail
-                            </button>
+            <div id="portfolioCarousel" class="carousel carousel-dark slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="portofolio-slide">
+                            <div class="portofolio-card">
+                                <img src="https://i.pinimg.com/1200x/05/37/6c/05376ca1a3c5184ad0b3fbf03fac418c.jpg" class="portofolio-img" alt="Project 1">
+                                <div class="portofolio-body">
+                                    <span class="tag tag-blue">React, TypeScript, Tailwind CSS, Golang</span>
+                                    <strong class="portofolio-title">Sistem Presensi dan Admin Dashboard Apotek Asasi</strong>
+                                    <p class="portofolio-desc">A comprehensive attendance system and admin dashboard for a pharmacy business.</p>
+                                    <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                        View Detail
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="portofolio-slide">
+                            <div class="portofolio-card">
+                                <img src="https://i.pinimg.com/736x/8b/89/19/8b891903d157ae09a32e3cc2ac643ab1.jpg" class="portofolio-img" alt="Project 2">
+                                <div class="portofolio-body">
+                                    <span class="tag tag-green">Next.js, TypeScript, LLM</span>
+                                    <strong class="portofolio-title">Monvora (Personal Finance)</strong>
+                                    <p class="portofolio-desc">A personal finance management app that automatically tracks and records transactions.</p>
+                                    <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                        View Detail
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="portofolio-slide">
+                            <div class="portofolio-card">
+                                <img src="https://i.pinimg.com/1200x/e6/21/5e/e6215e09a9a3a6bffa5eabf973b6acb4.jpg" class="portofolio-img" alt="Project 3">
+                                <div class="portofolio-body">
+                                    <span class="tag tag-yellow">Mobile</span>
+                                    <strong class="portofolio-title">Project 3</strong>
+                                    <p class="portofolio-desc">Description of project 3.</p>
+                                    <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                        View Detail
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="portofolio-card">
-                        <img src="https://i.pinimg.com/736x/8b/89/19/8b891903d157ae09a32e3cc2ac643ab1.jpg" class="portofolio-img" alt="Project 2">
-                        <div class="portofolio-body">
-                            <span class="tag tag-green">Next.js, TypeScript, LLM</span>
-                            <strong class="portofolio-title">Monvora (Personal Finance)</strong>
-                            <p class="portofolio-desc">A personal finance management app that automatically tracks and records transactions.</p>
-                            <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                                View Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="portofolio-card">
-                        <img src="https://i.pinimg.com/1200x/e6/21/5e/e6215e09a9a3a6bffa5eabf973b6acb4.jpg" class="portofolio-img" alt="Project 3">
-                        <div class="portofolio-body">
-                            <span class="tag tag-yellow">Mobile</span>
-                            <strong class="portofolio-title">Project 3</strong>
-                            <p class="portofolio-desc">Description of project 3.</p>
-                            <button type="button" class="btn-detail" data-bs-toggle="modal" data-bs-target="#projectModal3">
-                                View Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
@@ -167,6 +193,37 @@
     <footer class="text-center">
         <p class="mb-0">&copy; 2026 Mario Valentino Ardhana. All rights reserved.</p>
     </footer>
+
+    <!-- Modal: Contact -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" action="mailto:marioardhana37@gmail.com" method="post" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" name="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" name="Email" required>
+                        </div>
+                        <div class="mb-0">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" name="Message" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="contactForm" class="btn-detail">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal: About -->
     <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
