@@ -6,7 +6,7 @@ const products = [
     category: "electronics",
     price: 19999000,
     description: "Smartphone flagship Apple dengan chip A17 Pro dan kamera 48MP.",
-    image: "https://loremflickr.com/300/220/iphone,smartphone?lock=1",
+    image: "https://i.pinimg.com/originals/47/a8/88/47a888b347b9e6c7543d357cfa9eb94c.jpg",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const products = [
     category: "electronics",
     price: 14999000,
     description: "Android flagship dengan fitur AI Galaxy dan layar Dynamic AMOLED 2X.",
-    image: "https://loremflickr.com/300/220/samsung,smartphone?lock=2",
+    image: "https://i.pinimg.com/736x/dd/c6/54/ddc654a81c9cde44513dbfadeabae2a4.jpg",
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const products = [
     category: "electronics",
     price: 24999000,
     description: "Laptop ultra-tipis bertenaga chip Apple M3 dengan baterai 18 jam.",
-    image: "https://loremflickr.com/300/220/macbook,laptop?lock=3",
+    image: "https://i.pinimg.com/originals/9d/19/1d/9d191d12b6ad50d1317d4715d9715e76.jpg",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const products = [
     category: "electronics",
     price: 22500000,
     description: "Laptop premium layar OLED 15.6\" dengan Intel Core i9 Gen 13.",
-    image: "https://loremflickr.com/300/220/laptop,computer?lock=4",
+    image: "https://i.pinimg.com/originals/0a/52/ba/0a52ba04884b6fbf28c7b21f59e064a5.jpg",
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const products = [
     category: "electronics",
     price: 4999000,
     description: "Headphone over-ear ANC terbaik dengan audio Hi-Res 30 jam baterai.",
-    image: "https://loremflickr.com/300/220/headphone,audio?lock=5",
+    image: "https://i.pinimg.com/originals/5c/e6/dd/5ce6dd7871519d18d415f721997cd226.jpg",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const products = [
     category: "electronics",
     price: 12999000,
     description: "Tablet serbaguna bertenaga M2 dengan layar Liquid Retina 11\".",
-    image: "https://loremflickr.com/300/220/ipad,tablet?lock=6",
+    image: "https://i.pinimg.com/originals/2a/2c/95/2a2c95e2f7c3ea922c03e5a5baeca65e.jpg",
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const products = [
     category: "electronics",
     price: 8499000,
     description: "Smartwatch dengan chip S9, selalu aktif, dan fitur kesehatan lengkap.",
-    image: "https://loremflickr.com/300/220/smartwatch,apple?lock=7",
+    image: "https://i.pinimg.com/736x/ee/7a/72/ee7a72217a87b947425c21c31c12e57d.jpg",
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ const products = [
     category: "electronics",
     price: 18750000,
     description: "Smart TV OLED 4K dengan teknologi Dolby Vision & Atmos.",
-    image: "https://loremflickr.com/300/220/television,tv?lock=8",
+    image: "https://i.pinimg.com/originals/6f/ab/4a/6fab4a0025e5ca99ffa91636705bdb10.jpg",
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ const products = [
     category: "electronics",
     price: 11500000,
     description: "Mirrorless kamera 24.2MP ideal untuk vlogger dan fotografer pemula.",
-    image: "https://loremflickr.com/300/220/camera,canon?lock=9",
+    image: "https://i.pinimg.com/originals/39/55/a7/3955a7cdbe450b9f9febf82b4b5ee657.jpg",
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ const products = [
     category: "electronics",
     price: 8799000,
     description: "Konsol gaming gen terbaru dengan SSD ultra-cepat dan DualSense.",
-    image: "https://loremflickr.com/300/220/playstation,gaming?lock=10",
+    image: "https://i.pinimg.com/originals/90/52/bb/9052bb009cd89cb7f6c7b2efb654cd1e.jpg",
   },
   {
     id: 11,
@@ -86,7 +86,7 @@ const products = [
     category: "electronics",
     price: 5199000,
     description: "Konsol hybrid dengan layar OLED 7\" yang lebih cerah dan jernih.",
-    image: "https://loremflickr.com/300/220/nintendo,switch?lock=11",
+    image: "https://i.pinimg.com/originals/b7/46/ed/b746ed6b01ae0e4dadd8a4b9e28ddbfa.jpg",
   },
   {
     id: 12,
@@ -94,7 +94,7 @@ const products = [
     category: "electronics",
     price: 1899000,
     description: "Speaker Bluetooth portabel tahan air dengan suara bass yang kuat.",
-    image: "https://loremflickr.com/300/220/speaker,bluetooth?lock=12",
+    image: "https://i.pinimg.com/originals/84/ba/ee/84baeefcaced1e88cc1892e0de7f9b22.jpg",
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ const products = [
     category: "electronics",
     price: 3499000,
     description: "Robot penyedot debu pintar dengan navigasi LiDAR dan kontrol app.",
-    image: "https://loremflickr.com/300/220/vacuum,robot?lock=13",
+    image: "https://i.pinimg.com/736x/fe/16/2d/fe162df0b506e2adddf3689b4023ba2c.jpg",
   },
   {
     id: 14,
@@ -110,7 +110,7 @@ const products = [
     category: "electronics",
     price: 1599000,
     description: "Mouse ergonomis produktivitas tinggi dengan scroll MagSpeed.",
-    image: "https://loremflickr.com/300/220/computer,mouse?lock=14",
+    image: "https://i.pinimg.com/originals/ad/66/a6/ad66a666083253c843c5af297351b649.jpg",
   },
   {
     id: 15,
@@ -118,7 +118,7 @@ const products = [
     category: "electronics",
     price: 13999000,
     description: "Tablet Android premium dengan layar Dynamic AMOLED 11\" dan S Pen.",
-    image: "https://loremflickr.com/300/220/tablet,android?lock=15",
+    image: "https://i.pinimg.com/736x/a8/fe/0f/a8fe0f3ac2ef30948a79fb731d8f3372.jpg",
   },
 
   // ── Fashion ──────────────────────────────────────────────────
@@ -128,7 +128,7 @@ const products = [
     category: "fashion",
     price: 2199000,
     description: "Sneaker kasual dengan unit Air Max 270 untuk kenyamanan seharian.",
-    image: "https://loremflickr.com/300/220/nike,sneaker?lock=16",
+    image: "https://i.pinimg.com/736x/d2/a4/ba/d2a4bafe090ce447c2b2ad73c43ef229.jpg",
   },
   {
     id: 17,
@@ -136,7 +136,7 @@ const products = [
     category: "fashion",
     price: 2499000,
     description: "Sepatu lari dengan sol Boost yang responsif dan upper Primeknit.",
-    image: "https://loremflickr.com/300/220/adidas,running?lock=17",
+    image: "https://i.pinimg.com/736x/5c/d5/e3/5cd5e3e2cb3bfa2ae01148f39de40d49.jpg",
   },
   {
     id: 18,
@@ -144,7 +144,7 @@ const products = [
     category: "fashion",
     price: 899000,
     description: "Celana jeans straight-fit ikonik dengan bahan denim premium.",
-    image: "https://loremflickr.com/300/220/jeans,denim?lock=18",
+    image: "https://i.pinimg.com/736x/1a/8a/21/1a8a21049275381a2982d1fc21020487.jpg",
   },
   {
     id: 19,
@@ -152,7 +152,7 @@ const products = [
     category: "fashion",
     price: 1299000,
     description: "Blazer kasual unisex potongan slim untuk tampilan smart-casual.",
-    image: "https://loremflickr.com/300/220/blazer,fashion?lock=19",
+    image: "https://i.pinimg.com/736x/3a/16/96/3a16967201d0190539c41a5726cacdfb.jpg",
   },
   {
     id: 20,
@@ -160,7 +160,7 @@ const products = [
     category: "fashion",
     price: 199000,
     description: "Kaos katun basic essential dengan berbagai pilihan warna.",
-    image: "https://loremflickr.com/300/220/tshirt,clothing?lock=20",
+    image: "https://i.pinimg.com/736x/43/0c/9b/430c9bcdaa057249b08f41ad61f2ab35.jpg",
   },
   {
     id: 21,
@@ -168,7 +168,7 @@ const products = [
     category: "fashion",
     price: 699000,
     description: "Jaket fleece ringan dan hangat, cocok untuk musim dingin.",
-    image: "https://loremflickr.com/300/220/jacket,fleece?lock=21",
+    image: "https://i.pinimg.com/736x/dd/0d/43/dd0d434090660ee6ee5716ad88289928.jpg",
   },
   {
     id: 22,
@@ -176,7 +176,7 @@ const products = [
     category: "fashion",
     price: 349000,
     description: "Tas tote kanvas serbaguna dengan desain minimalis dan tahan lama.",
-    image: "https://loremflickr.com/300/220/tote,bag?lock=22",
+    image: "https://i.pinimg.com/736x/a8/98/68/a89868a0b4b593c1960f8e4c55945571.jpg",
   },
   {
     id: 23,
@@ -184,7 +184,7 @@ const products = [
     category: "fashion",
     price: 2899000,
     description: "Kacamata hitam aviator klasik dengan lensa polarized UV400.",
-    image: "https://loremflickr.com/300/220/sunglasses,aviator?lock=23",
+    image: "https://i.pinimg.com/736x/e9/23/1c/e9231c97136fa14ebcba3a3f97a4f3e5.jpg",
   },
   {
     id: 24,
@@ -192,7 +192,7 @@ const products = [
     category: "fashion",
     price: 1999000,
     description: "Jam tangan pria analog kasual dengan tali kulit coklat.",
-    image: "https://loremflickr.com/300/220/watch,analog?lock=24",
+    image: "https://i.pinimg.com/736x/c9/19/0b/c9190bebab9561c2aec9f66ba6ef22dd.jpg",
   },
   {
     id: 25,
@@ -200,7 +200,7 @@ const products = [
     category: "fashion",
     price: 1599000,
     description: "Sneaker lifestyle ikonik dengan ENCAP midsole dan upper suede.",
-    image: "https://loremflickr.com/300/220/sneaker,shoes?lock=25",
+    image: "https://i.pinimg.com/736x/1b/e0/8f/1be08f8d228fc5479072c86c2cef2db3.jpg",
   },
   {
     id: 26,
@@ -208,7 +208,7 @@ const products = [
     category: "fashion",
     price: 1199000,
     description: "Kemeja polo klasik dari cotton pique dengan logo kuda ikonik.",
-    image: "https://loremflickr.com/300/220/polo,shirt?lock=26",
+    image: "https://i.pinimg.com/736x/62/d0/38/62d0387769020a49d60044195942b1f2.jpg",
   },
   {
     id: 27,
@@ -216,7 +216,7 @@ const products = [
     category: "fashion",
     price: 799000,
     description: "Sneaker kanvas legendaris dengan outsole karet vulkanisasi.",
-    image: "https://loremflickr.com/300/220/converse,sneaker?lock=27",
+    image: "https://i.pinimg.com/736x/9f/1f/73/9f1f7340bea8bdffa5e73452a6a5acde.jpg",
   },
   {
     id: 28,
@@ -224,7 +224,7 @@ const products = [
     category: "fashion",
     price: 599000,
     description: "Dompet kulit asli slim dengan banyak slot kartu dan RFID blocking.",
-    image: "https://loremflickr.com/300/220/wallet,leather?lock=28",
+    image: "https://i.pinimg.com/736x/52/ab/03/52ab03a44f08bdf896c5bbd5422a41e5.jpg",
   },
   {
     id: 29,
@@ -232,7 +232,7 @@ const products = [
     category: "fashion",
     price: 249000,
     description: "Topi bucket trendi dari bahan cotton twill tersedia banyak warna.",
-    image: "https://loremflickr.com/300/220/hat,cap?lock=29",
+    image: "https://i.pinimg.com/736x/35/6f/94/356f94f12f94217ee6c29e41baa63435.jpg",
   },
   {
     id: 30,
@@ -240,7 +240,7 @@ const products = [
     category: "fashion",
     price: 6500000,
     description: "Ikat pinggang kulit GG Supreme dengan gesper double G signature.",
-    image: "https://loremflickr.com/300/220/belt,luxury?lock=30",
+    image: "https://i.pinimg.com/736x/60/76/b1/6076b1eca0d36cd33a5c4698ef172a7c.jpg",
   },
 
   // ── Sports & Fitness ─────────────────────────────────────────
@@ -250,7 +250,7 @@ const products = [
     category: "sports",
     price: 449000,
     description: "Matras yoga anti-slip 6mm dari bahan TPE ramah lingkungan.",
-    image: "https://loremflickr.com/300/220/yoga,mat?lock=46",
+    image: "https://i.pinimg.com/736x/6e/d9/29/6ed929d2879c1cf7309d5acf98d2bd61.jpg",
   },
   {
     id: 47,
@@ -258,7 +258,7 @@ const products = [
     category: "sports",
     price: 1299000,
     description: "Set dumbbell hexagonal cast iron 2x10kg dengan grip anti-slip.",
-    image: "https://loremflickr.com/300/220/dumbbell,gym?lock=47",
+    image: "https://i.pinimg.com/736x/47/0a/5c/470a5ced2d52f4e534362ab96257f4c7.jpg",
   },
   {
     id: 48,
@@ -266,7 +266,7 @@ const products = [
     category: "sports",
     price: 2499000,
     description: "Sepeda statis lipat dengan 8 level resistansi dan display LCD.",
-    image: "https://loremflickr.com/300/220/bicycle,cycling?lock=48",
+    image: "https://i.pinimg.com/736x/0e/c0/2c/0ec02c0b67797397ec33a07f5afceafa.jpg",
   },
   {
     id: 49,
@@ -274,7 +274,7 @@ const products = [
     category: "sports",
     price: 7999000,
     description: "Treadmill lipat dengan kecepatan 0–14 km/h dan incline otomatis.",
-    image: "https://loremflickr.com/300/220/treadmill,fitness?lock=49",
+    image: "https://i.pinimg.com/736x/cf/b9/a0/cfb9a06711bb81d4a4085906dc6a13e0.jpg",
   },
   {
     id: 50,
@@ -282,7 +282,7 @@ const products = [
     category: "sports",
     price: 199000,
     description: "Set 5 resistance band latex dengan level tahanan berbeda.",
-    image: "https://loremflickr.com/300/220/resistance,band?lock=50",
+    image: "https://i.pinimg.com/736x/b2/17/cd/b217cda97beafb730d586c1bbfe99909.jpg",
   },
   {
     id: 51,
@@ -290,7 +290,7 @@ const products = [
     category: "sports",
     price: 599000,
     description: "Whey protein isolate 25g protein per serving, rasa coklat.",
-    image: "https://loremflickr.com/300/220/protein,supplement?lock=51",
+    image: "https://i.pinimg.com/736x/98/ed/aa/98edaaff944bfbb0794b58c22757d386.jpg",
   },
   {
     id: 52,
@@ -298,7 +298,7 @@ const products = [
     category: "sports",
     price: 1199000,
     description: "Raket Yonex Nanoflare series ultraringan 80g untuk smash keras.",
-    image: "https://loremflickr.com/300/220/badminton,racket?lock=52",
+    image: "https://i.pinimg.com/736x/50/b6/39/50b639e8a4448520c31579bbb5ae5e16.jpg",
   },
   {
     id: 53,
@@ -306,7 +306,7 @@ const products = [
     category: "sports",
     price: 1799000,
     description: "Sepatu lari Asics Gel-Nimbus dengan teknologi FlyteFoam.",
-    image: "https://loremflickr.com/300/220/running,shoes?lock=53",
+    image: "https://i.pinimg.com/736x/16/1c/c8/161cc8dc381e7657228f45af2b1847c6.jpg",
   },
   {
     id: 54,
@@ -314,7 +314,7 @@ const products = [
     category: "sports",
     price: 149000,
     description: "Skipping rope kecepatan tinggi dengan bantalan bearing presisi.",
-    image: "https://loremflickr.com/300/220/jumprope,skipping?lock=54",
+    image: "https://i.pinimg.com/736x/eb/ee/cf/ebeecf8f4d18f0f7d66d4ee8f3ddc6b7.jpg",
   },
   {
     id: 55,
@@ -322,7 +322,7 @@ const products = [
     category: "sports",
     price: 349000,
     description: "Pull-up bar tanpa bor, cocok untuk pintu 60–100cm.",
-    image: "https://loremflickr.com/300/220/pullup,gym?lock=55",
+    image: "https://i.pinimg.com/736x/c4/9a/4a/c49a4a043478579ebd48dfb85c2eb92f.jpg",
   },
   {
     id: 56,
@@ -330,7 +330,7 @@ const products = [
     category: "sports",
     price: 279000,
     description: "Foam roller grid texture untuk pemulihan otot pasca latihan.",
-    image: "https://loremflickr.com/300/220/foam,roller?lock=56",
+    image: "https://i.pinimg.com/736x/46/87/1e/46871e252440366247e3bc4c59a1baf6.jpg",
   },
   {
     id: 57,
@@ -338,7 +338,7 @@ const products = [
     category: "sports",
     price: 499000,
     description: "Gloves boxing kulit sintetis 14oz dengan padding multi-layer.",
-    image: "https://loremflickr.com/300/220/boxing,gloves?lock=57",
+    image: "https://i.pinimg.com/736x/0a/07/c8/0a07c88627aa55ceb9ec17aded85d0c1.jpg",
   },
   {
     id: 58,
@@ -346,7 +346,7 @@ const products = [
     category: "sports",
     price: 129000,
     description: "Kickboard EVA ringan untuk latihan teknik kaki di kolam renang.",
-    image: "https://loremflickr.com/300/220/swimming,pool?lock=58",
+    image: "https://i.pinimg.com/736x/93/11/14/93111413af2e1330a82e1ddc038fc67f.jpg",
   },
   {
     id: 59,
@@ -354,7 +354,7 @@ const products = [
     category: "sports",
     price: 399000,
     description: "Tas gym 40L dengan kompartemen sepatu terpisah dan bahan water-resistant.",
-    image: "https://loremflickr.com/300/220/gym,bag?lock=59",
+    image: "https://i.pinimg.com/736x/86/55/d5/8655d5075a0793b37bafd5f791f38e24.jpg",
   },
   {
     id: 60,
@@ -362,7 +362,7 @@ const products = [
     category: "sports",
     price: 699000,
     description: "Kettlebell cast iron 16kg dengan grip lebar untuk swing dan Turkish get-up.",
-    image: "https://loremflickr.com/300/220/kettlebell,gym?lock=60",
+    image: "https://i.pinimg.com/736x/08/bd/6b/08bd6b438d4483c180e0b4f3a8b74460.jpg",
   },
 
   // ── Sepatu ───────────────────────────────────────────────────
@@ -372,7 +372,7 @@ const products = [
     category: "shoes",
     price: 1599000,
     description: "Sneaker ikonik Nike dengan sole rubber tebal dan upper kulit putih.",
-    image: "https://loremflickr.com/300/220/nike,airforce?lock=61",
+    image: "https://i.pinimg.com/736x/77/bb/17/77bb174f2de547564e589e80bd769e6c.jpg",
   },
   {
     id: 62,
@@ -380,7 +380,7 @@ const products = [
     category: "shoes",
     price: 1299000,
     description: "Sneaker klasik kulit dengan aksen tiga strip dan sol serrated.",
-    image: "https://loremflickr.com/300/220/adidas,sneaker?lock=62",
+    image: "https://i.pinimg.com/736x/29/44/fb/2944fbc565f0af2d364df0b5de12fdde.jpg",
   },
   {
     id: 63,
@@ -388,7 +388,7 @@ const products = [
     category: "shoes",
     price: 999000,
     description: "Sneaker skate klasik Vans dengan side stripe ikonik dan sol waffle.",
-    image: "https://loremflickr.com/300/220/vans,skate?lock=63",
+    image: "https://i.pinimg.com/736x/c5/01/0d/c5010dacbf832fe2a634773918136f7e.jpg",
   },
   {
     id: 64,
@@ -396,7 +396,7 @@ const products = [
     category: "shoes",
     price: 3299000,
     description: "Sneaker lifestyle premium buatan USA dengan cushioning ENCAP.",
-    image: "https://loremflickr.com/300/220/sneaker,shoes?lock=64",
+    image: "https://i.pinimg.com/736x/6d/72/9e/6d729e5391125dc08988443b3d10027c.jpg",
   },
   {
     id: 65,
@@ -404,7 +404,7 @@ const products = [
     category: "shoes",
     price: 1099000,
     description: "Sneaker suede legendaris dengan formstrip Puma dan sol cupsole.",
-    image: "https://loremflickr.com/300/220/puma,sneaker?lock=65",
+    image: "https://i.pinimg.com/736x/e2/8e/09/e28e0937e89cba793b42c67229ff80dd.jpg",
   },
   {
     id: 66,
@@ -412,7 +412,7 @@ const products = [
     category: "shoes",
     price: 1199000,
     description: "Sepatu kulit klasik Reebok dengan sol EVA untuk kenyamanan harian.",
-    image: "https://loremflickr.com/300/220/reebok,classic?lock=66",
+    image: "https://i.pinimg.com/736x/2a/95/dd/2a95dd5f48230e54000fc5ec2e3191f0.jpg",
   },
   {
     id: 67,
@@ -420,7 +420,7 @@ const products = [
     category: "shoes",
     price: 3499000,
     description: "Boots kulit 8-lubang ikonik dengan sol AirWair bouncing tahan lama.",
-    image: "https://loremflickr.com/300/220/boots,leather?lock=67",
+    image: "https://i.pinimg.com/736x/e2/7e/6a/e27e6a120c1b2f93d2fbbc37d020d340.jpg",
   },
   {
     id: 68,
@@ -428,7 +428,7 @@ const products = [
     category: "shoes",
     price: 899000,
     description: "Sneaker chunky dengan Memory Foam insole untuk kenyamanan maksimal.",
-    image: "https://loremflickr.com/300/220/chunky,sneaker?lock=68",
+    image: "https://i.pinimg.com/736x/3f/81/41/3f81418ce0949a0aaaa2fc6488aedc2d.jpg",
   },
   {
     id: 69,
@@ -436,7 +436,7 @@ const products = [
     category: "shoes",
     price: 2499000,
     description: "Sepatu formal kulit sapi full-grain dengan sol FLUIDFORM.",
-    image: "https://loremflickr.com/300/220/formal,shoes?lock=69",
+    image: "https://i.pinimg.com/736x/9d/08/01/9d0801c70cf3fa9d40b6e073dc1fc2e9.jpg",
   },
   {
     id: 70,
@@ -444,7 +444,7 @@ const products = [
     category: "shoes",
     price: 699000,
     description: "Sandal clog ringan Crocs dengan bahan Croslite tahan air.",
-    image: "https://loremflickr.com/300/220/crocs,sandal?lock=70",
+    image: "https://i.pinimg.com/736x/ac/9e/14/ac9e140e1929bdc111e655b44696065f.jpg",
   },
   {
     id: 71,
@@ -452,7 +452,7 @@ const products = [
     category: "shoes",
     price: 1899000,
     description: "Sandal dua tali ikonik dengan footbed kork anatomis asal Jerman.",
-    image: "https://loremflickr.com/300/220/birkenstock,sandal?lock=71",
+    image: "https://i.pinimg.com/736x/18/29/9a/18299abaccef5c5822753e0a3a3152a4.jpg",
   },
   {
     id: 72,
@@ -460,7 +460,7 @@ const products = [
     category: "shoes",
     price: 2999000,
     description: "Boots kulit tahan air waterproof dengan sol anti-fatigue 24/7.",
-    image: "https://loremflickr.com/300/220/timberland,boots?lock=72",
+    image: "https://i.pinimg.com/736x/0a/59/41/0a59418ce98c8a868c21bc8dec7591f0.jpg",
   },
   {
     id: 73,
@@ -468,7 +468,7 @@ const products = [
     category: "shoes",
     price: 799000,
     description: "Sepatu futsal indoor dengan upper sintetis dan sol non-marking.",
-    image: "https://loremflickr.com/300/220/futsal,sport?lock=73",
+    image: "https://i.pinimg.com/736x/75/7c/3f/757c3f1a66259218b977907c32c16780.jpg",
   },
   {
     id: 74,
@@ -476,7 +476,7 @@ const products = [
     category: "shoes",
     price: 3199000,
     description: "Sepatu lari dengan CloudTec® Phase ultra-tebal untuk cushioning maksimal.",
-    image: "https://loremflickr.com/300/220/running,sport?lock=74",
+    image: "https://i.pinimg.com/736x/d2/56/91/d25691cd8582363023e808447c217c5f.jpg",
   },
   {
     id: 75,
@@ -484,7 +484,7 @@ const products = [
     category: "shoes",
     price: 299000,
     description: "Sandal jepit Brasil ikonik berbahan karet alami ringan dan nyaman.",
-    image: "https://loremflickr.com/300/220/sandal,flipflop?lock=75",
+    image: "https://i.pinimg.com/736x/5e/74/b2/5e74b2b48f96be21a022262b22ffe28d.jpg",
   },
 
   // ── Books & Stationery ────────────────────────────────────────
@@ -494,7 +494,7 @@ const products = [
     category: "books",
     price: 119000,
     description: "Buku best-seller James Clear tentang membangun kebiasaan baik.",
-    image: "https://loremflickr.com/300/220/book,reading?lock=76",
+    image: "https://i.pinimg.com/736x/d0/8a/8d/d08a8dbbc3d0674067d4ee9bce3b47b9.jpg",
   },
   {
     id: 77,
@@ -502,7 +502,7 @@ const products = [
     category: "books",
     price: 99000,
     description: "Buku Morgan Housel tentang pola pikir finansial yang sehat.",
-    image: "https://loremflickr.com/300/220/book,money?lock=77",
+    image: "https://i.pinimg.com/736x/14/87/a7/1487a75e829bd583926d52b441552f12.jpg",
   },
   {
     id: 78,
@@ -510,7 +510,7 @@ const products = [
     category: "books",
     price: 299000,
     description: "Buku catatan dot-grid premium 249 halaman dengan hard cover.",
-    image: "https://loremflickr.com/300/220/notebook,journal?lock=78",
+    image: "https://i.pinimg.com/736x/9e/f9/05/9ef905cfd9912df44686a220d70261a7.jpg",
   },
   {
     id: 79,
@@ -518,7 +518,7 @@ const products = [
     category: "books",
     price: 29000,
     description: "Pulpen gel 0.5mm tinta hitam pekat, halus untuk tulisan tangan.",
-    image: "https://loremflickr.com/300/220/pen,stationery?lock=79",
+    image: "https://i.pinimg.com/736x/9e/b7/f6/9eb7f6741785ec013713c1f705cc3bcf.jpg",
   },
   {
     id: 80,
@@ -526,7 +526,7 @@ const products = [
     category: "books",
     price: 49000,
     description: "Spidol stabilo set 6 warna pastel chisel-tip untuk belajar.",
-    image: "https://loremflickr.com/300/220/highlighter,marker?lock=80",
+    image: "https://i.pinimg.com/736x/db/d6/ce/dbd6ce2c394dcc0f3beff2ed77557bd2.jpg",
   },
   {
     id: 81,
@@ -534,7 +534,7 @@ const products = [
     category: "books",
     price: 109000,
     description: "Panduan fokus produktif di dunia yang penuh distraksi digital.",
-    image: "https://loremflickr.com/300/220/book,work?lock=81",
+    image: "https://i.pinimg.com/736x/f7/45/9d/f7459dbeb51b2354865dabd1c52cf272.jpg",
   },
   {
     id: 82,
@@ -542,7 +542,7 @@ const products = [
     category: "books",
     price: 189000,
     description: "Agenda tahunan hardcover dengan layout weekly + monthly planning.",
-    image: "https://loremflickr.com/300/220/planner,agenda?lock=82",
+    image: "https://i.pinimg.com/736x/95/a0/f5/95a0f529367cf68ac188ecc4fb29ea9a.jpg",
   },
   {
     id: 83,
@@ -550,7 +550,7 @@ const products = [
     category: "books",
     price: 39000,
     description: "Set 6 warna sticky notes pastel 80 lembar per blok ukuran 3x3\".",
-    image: "https://loremflickr.com/300/220/stickynotes,office?lock=83",
+    image: "https://i.pinimg.com/1200x/2f/2f/b6/2f2fb64ee71496140c40e1962c9845c6.jpg",
   },
   {
     id: 84,
@@ -558,7 +558,7 @@ const products = [
     category: "books",
     price: 109000,
     description: "Metodologi Eric Ries untuk membangun startup yang efisien dan adaptif.",
-    image: "https://loremflickr.com/300/220/book,startup?lock=84",
+    image: "https://i.pinimg.com/736x/47/e1/5a/47e15a2fa7790dfc782a4f55d83baa77.jpg",
   },
   {
     id: 85,
@@ -566,7 +566,7 @@ const products = [
     category: "books",
     price: 59000,
     description: "Set 12 pensil grafis 2B premium untuk menggambar dan sketsa.",
-    image: "https://loremflickr.com/300/220/pencil,drawing?lock=85",
+    image: "https://i.pinimg.com/736x/7b/28/23/7b2823d9bf5f5bf344e2088feedf13b4.jpg",
   },
   {
     id: 86,
@@ -574,7 +574,7 @@ const products = [
     category: "books",
     price: 99000,
     description: "Buku Peter Thiel tentang inovasi dan membangun bisnis dari nol.",
-    image: "https://loremflickr.com/300/220/book,innovation?lock=86",
+    image: "https://i.pinimg.com/736x/fb/57/92/fb57926c5c483c41d724081d8b58f193.jpg",
   },
   {
     id: 87,
@@ -582,7 +582,7 @@ const products = [
     category: "books",
     price: 79000,
     description: "Set 20 washi tape motif aesthetic untuk journaling dan dekorasi.",
-    image: "https://loremflickr.com/300/220/tape,craft?lock=87",
+    image: "https://i.pinimg.com/736x/50/62/b7/5062b78c604144484124f03cf86dabce.jpg",
   },
   {
     id: 88,
@@ -590,7 +590,7 @@ const products = [
     category: "books",
     price: 55000,
     description: "Kalender meja minimalis spiral 2026 dengan ruang catatan harian.",
-    image: "https://loremflickr.com/300/220/calendar,desk?lock=88",
+    image: "https://i.pinimg.com/736x/74/b1/3a/74b13ab8da605eefdf2eba02540b5ddb.jpg",
   },
   {
     id: 89,
@@ -598,7 +598,7 @@ const products = [
     category: "books",
     price: 119000,
     description: "Panduan membangun produk, tim, dan karir dari bapak iPod.",
-    image: "https://loremflickr.com/300/220/book,technology?lock=89",
+    image: "https://i.pinimg.com/736x/f5/f5/d8/f5f5d8a203e94bd5f6a28e722a34f800.jpg",
   },
   {
     id: 90,
@@ -606,7 +606,7 @@ const products = [
     category: "books",
     price: 45000,
     description: "Stapler mini portable ukuran saku dengan 1000 isi staples.",
-    image: "https://loremflickr.com/300/220/stapler,office?lock=90",
+    image: "https://i.pinimg.com/736x/ed/27/7e/ed277eef0296e97324956691125ea9f4.jpg",
   },
 
   // ── Home & Living ─────────────────────────────────────────────
@@ -616,7 +616,7 @@ const products = [
     category: "homeliving",
     price: 1299000,
     description: "Rak buku serbaguna dari IKEA dengan 5 rak adjustable.",
-    image: "https://loremflickr.com/300/220/bookcase,shelf?lock=31",
+    image: "https://i.pinimg.com/originals/d0/b5/07/d0b507941359b368b36a4762b0b31d1d.jpg",
   },
   {
     id: 32,
@@ -624,7 +624,7 @@ const products = [
     category: "homeliving",
     price: 2999000,
     description: "Pembersih udara HEPA dengan sensor partikel PM2.5 real-time.",
-    image: "https://loremflickr.com/300/220/airpurifier,home?lock=32",
+    image: "https://i.pinimg.com/originals/b7/a7/fb/b7a7fbec79f5a78707940c659faa17f7.jpg",
   },
   {
     id: 33,
@@ -632,7 +632,7 @@ const products = [
     category: "homeliving",
     price: 3499000,
     description: "Mesin kopi kapsul dengan teknologi centrifusion untuk crema sempurna.",
-    image: "https://loremflickr.com/300/220/coffee,machine?lock=33",
+    image: "https://i.pinimg.com/originals/b8/11/f3/b811f344b87a9b734a1aa41e944ea6c3.jpg",
   },
   {
     id: 34,
@@ -640,7 +640,7 @@ const products = [
     category: "homeliving",
     price: 9999000,
     description: "Vacuum cordless dengan laser dust detection dan HEPA filtration.",
-    image: "https://loremflickr.com/300/220/vacuum,cleaner?lock=34",
+    image: "https://i.pinimg.com/originals/12/c7/1a/12c71ae254d88d2680635d7480355a26.jpg",
   },
   {
     id: 35,
@@ -648,7 +648,7 @@ const products = [
     category: "homeliving",
     price: 8750000,
     description: "Mixer stand iconic dengan 10 kecepatan dan bowl stainless 4.8L.",
-    image: "https://loremflickr.com/300/220/mixer,kitchen?lock=35",
+    image: "https://i.pinimg.com/originals/6b/91/e1/6b91e1108f68f18a2d090f297e0f8c5b.jpg",
   },
   {
     id: 36,
@@ -656,7 +656,7 @@ const products = [
     category: "homeliving",
     price: 5999000,
     description: "Panci cast iron enamel premium 28cm untuk memasak slow cook.",
-    image: "https://loremflickr.com/300/220/cookware,pot?lock=36",
+    image: "https://i.pinimg.com/originals/9c/cb/71/9ccb71008e0dc6b9b57d0c92d94098e6.jpg",
   },
   {
     id: 37,
@@ -664,7 +664,7 @@ const products = [
     category: "homeliving",
     price: 899000,
     description: "Diffuser ultrasonic minimalis dengan timer dan lampu mood light.",
-    image: "https://loremflickr.com/300/220/diffuser,aroma?lock=37",
+    image: "https://i.pinimg.com/originals/af/6c/8c/af6c8c92cbd2cea23ccf51d2307f9b85.jpg",
   },
   {
     id: 38,
@@ -672,7 +672,7 @@ const products = [
     category: "homeliving",
     price: 449000,
     description: "Set 3 lampu pintar RGB 9W kontrol via app dan suara.",
-    image: "https://loremflickr.com/300/220/bulb,light?lock=38",
+    image: "https://i.pinimg.com/originals/c2/1b/20/c21b20792d911b74059308b0b0f42e21.jpg",
   },
   {
     id: 39,
@@ -680,7 +680,7 @@ const products = [
     category: "homeliving",
     price: 1899000,
     description: "Kursi santai ergonomis dengan rangka kayu birch dan busa nyaman.",
-    image: "https://loremflickr.com/300/220/chair,furniture?lock=39",
+    image: "https://i.pinimg.com/originals/e2/64/a7/e264a7711364e939d2be59f0e676fcd4.jpg",
   },
   {
     id: 40,
@@ -688,7 +688,7 @@ const products = [
     category: "homeliving",
     price: 2299000,
     description: "Pressure cooker multifungsi 7-in-1 kapasitas 6 liter.",
-    image: "https://loremflickr.com/300/220/cooker,kitchen?lock=40",
+    image: "https://i.pinimg.com/originals/9f/e8/ae/9fe8aeae3758f4b2308f4e07be6305ee.jpg",
   },
   {
     id: 41,
@@ -696,7 +696,7 @@ const products = [
     category: "homeliving",
     price: 4999000,
     description: "Toaster premium Jepang dengan teknologi uap untuk roti sempurna.",
-    image: "https://loremflickr.com/300/220/toaster,bread?lock=41",
+    image: "https://i.pinimg.com/originals/93/c9/23/93c923d09bea6d3949210b23954630da.jpg",
   },
   {
     id: 42,
@@ -704,7 +704,7 @@ const products = [
     category: "homeliving",
     price: 399000,
     description: "Set handuk organik bambu 4 pcs, lembut, anti-bakteri & eco-friendly.",
-    image: "https://loremflickr.com/300/220/towel,bathroom?lock=42",
+    image: "https://i.pinimg.com/736x/ac/71/d1/ac71d12a41738e60fd86aa10555e5e82.jpg",
   },
   {
     id: 43,
@@ -712,7 +712,7 @@ const products = [
     category: "homeliving",
     price: 549000,
     description: "Poster seni abstract minimalis dalam bingkai kayu natural 50x70cm.",
-    image: "https://loremflickr.com/300/220/wallart,poster?lock=43",
+    image: "https://i.pinimg.com/originals/51/e2/15/51e215cf9e5e53c32c9be8aa4d10a3c4.jpg",
   },
   {
     id: 44,
@@ -720,7 +720,7 @@ const products = [
     category: "homeliving",
     price: 329000,
     description: "Set 3 pot keramik minimalis dengan warna earth tone elegan.",
-    image: "https://loremflickr.com/300/220/plant,pot?lock=44",
+    image: "https://i.pinimg.com/originals/70/e7/60/70e760a93acd8d338164f9c53f1c119f.png",
   },
   {
     id: 45,
@@ -728,7 +728,7 @@ const products = [
     category: "homeliving",
     price: 699000,
     description: "Bantal memory foam ergonomis yang menyesuaikan postur leher.",
-    image: "https://loremflickr.com/300/220/pillow,bedroom?lock=45",
+    image: "https://i.pinimg.com/originals/d0/26/47/d0264797ac52b72c3355f1e8a7bffd29.png",
   },
 ];
 
