@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     volumes:
       - "./Sesi 7:/opt/lampp/htdocs"
+      - "./Sesi 8:/opt/lampp/htdocs/Sesi8"
       - mysql_data:/opt/lampp/var/mysql
     ports:
       - "8080:80"
