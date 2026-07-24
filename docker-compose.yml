@@ -1,0 +1,14 @@
+services:
+  xampp:
+    image: tomsik68/xampp:7
+    container_name: eduwork_xampp
+    restart: unless-stopped
+    volumes:
+      - "./Sesi 7:/opt/lampp/htdocs"
+      - mysql_data:/opt/lampp/var/mysql
+    ports:
+      - "8080:80"
+      - "3307:3306"
+
+volumes:
+  mysql_data:
