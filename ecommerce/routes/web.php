@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/products', function () {
     return view('products');
@@ -24,4 +27,19 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
+});
+
+// Resource untuk modul Produk
+Route::resource('products', ProductController::class);
+
+// Resource untuk modul Halaman
+Route::resource('pages', PageController::class);
+
+// ===== Area Admin (sementara tanpa role, hanya dipisah) =====
+Route::prefix('admin')->name('admin.')->group(function () {
+    // CRUD Produk Admin
+    Route::resource('products', AdminProductController::class);
+
+    // CRUD Kategori Produk
+    Route::resource('categories', CategoryController::class);
 });
