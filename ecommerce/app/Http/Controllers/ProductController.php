@@ -42,7 +42,7 @@ class ProductController extends Controller
         Product::create($data);
 
         return redirect()
-            ->route('products.index')
+            ->route('products.public')
             ->with('success', 'Produk berhasil ditambahkan.');
     }
 
@@ -76,7 +76,7 @@ class ProductController extends Controller
         $product->update($data);
 
         return redirect()
-            ->route('products.index')
+            ->route('products.public')
             ->with('success', 'Produk berhasil diperbarui.');
     }
 
@@ -88,7 +88,7 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()
-            ->route('products.index')
+            ->route('products.public')
             ->with('success', 'Produk berhasil dihapus.');
     }
 }

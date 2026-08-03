@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="mb-4">
-        <a href="{{ route('products.index') }}" class="btn btn-link px-0">&larr; Kembali</a>
+        <a href="{{ route('products.public') }}" class="btn btn-link px-0">&larr; Kembali</a>
         <h1>{{ $product->name }}</h1>
     </div>
 
