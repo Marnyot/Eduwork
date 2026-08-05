@@ -51,5 +51,5 @@
         </tbody>
     </table>
 
-    {{ $pages->links() }}
+    {{ $pages->links('pagination::bootstrap-5') }}
 @endsection

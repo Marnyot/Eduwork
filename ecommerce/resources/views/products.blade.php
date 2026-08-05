@@ -10,7 +10,7 @@
             <div class="col-md-4 mb-4">
                 <x-product-card
                     :title="$product->name"
-                    :description="'Rp ' . number_format($product->price)"
+                    :description="'Rp ' . number_format($product->price, 0, ',', '.')"
                     link="{{ route('products.public') }}"
                 />
             </div>
@@ -21,5 +21,5 @@
         @endforelse
     </div>
 
-    {{ $products->links() }}
+    {{ $products->links('pagination::bootstrap-5') }}
 @endsection

@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <th>Harga</th>
-            <td>{{ number_format($product->price) }}</td>
+            <td>{{ number_format($product->price, 0, ',', '.') }}</td>
         </tr>
         <tr>
             <th>Dibuat</th>

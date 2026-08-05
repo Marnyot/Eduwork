@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
-                    <td>{{ number_format($product->price) }}</td>
+                    <td>{{ number_format($product->price, 0, ',', '.') }}</td>
                     <td class="d-flex gap-2">
                         <a href="{{ route('products.show', $product) }}" class="btn btn-sm btn-info">Lihat</a>
                         <a href="{{ route('products.edit', $product) }}" class="btn btn-sm btn-warning">Ubah</a>
@@ -41,5 +41,5 @@
         </tbody>
     </table>
 
-    {{ $products->links() }}
+    {{ $products->links('pagination::bootstrap-5') }}
 @endsection
