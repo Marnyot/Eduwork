@@ -12,7 +12,7 @@
         <tr><th>ID</th><td>{{ $product->id }}</td></tr>
         <tr><th>Nama</th><td>{{ $product->name }}</td></tr>
         <tr><th>Harga</th><td>{{ number_format($product->price, 0, ',', '.') }}</td></tr>
-        <tr><th>Kategori</th><td>{{ $product->category?->name ?? '-' }}</td></tr>
+        <tr><th>Kategori</th><td>{{ $product->productCategory?->name ?? '-' }}</td></tr>
         <tr><th>Dibuat</th><td>{{ $product->created_at }}</td></tr>
         <tr><th>Diperbarui</th><td>{{ $product->updated_at }}</td></tr>
     </table>
