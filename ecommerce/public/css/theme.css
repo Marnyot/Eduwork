@@ -1,0 +1,357 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Eduwork Store — Design System (adaptasi dari Sesi 9)
+   Identitas: retail hangat, typography-first, kontras tinggi, minim dekorasi.
+   Font Inter, grid 8px, radius konsisten, state eksplisit.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ── Warna ─────────────────────────────────────────────────────────── */
+    --edu-bg:            #f7f5f0;
+    --edu-surface:       #ffffff;
+    --edu-surface-2:     #f2efe9;
+    --edu-border:        #e5e0d6;
+    --edu-border-strong: #d5cfc3;
+    --edu-ink:           #26221a;
+    --edu-muted:         #6e675c;
+    --edu-muted-2:       #948d7e;
+
+    /* Primary — pinus hijau (retail) */
+    --edu-primary:        #2f855a;
+    --edu-primary-hover:  #276749;
+    --edu-primary-active: #1f5d3f;
+    --edu-primary-tint:   #eaf5ee;
+    --edu-on-primary:     #ffffff;
+
+    /* Accent — amber */
+    --edu-accent:       #d97706;
+    --edu-accent-ink:   #9a5b04;
+
+    /* ── Tipografi ─────────────────────────────────────────────────────── */
+    --edu-font-sans: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+
+    /* ── Radius & shadow ───────────────────────────────────────────────── */
+    --edu-radius-sm: 6px;
+    --edu-radius-md: 10px;
+    --edu-radius-lg: 16px;
+    --edu-radius-pill: 999px;
+    --edu-shadow-sm: 0 1px 2px rgba(38, 34, 26, 0.05), 0 1px 1px rgba(38, 34, 26, 0.03);
+    --edu-shadow-md: 0 2px 4px rgba(38, 34, 26, 0.04), 0 12px 24px -8px rgba(38, 34, 26, 0.10);
+    --edu-ring: 0 0 0 3px var(--edu-primary-tint);
+}
+
+body {
+    background: var(--edu-bg);
+    color: var(--edu-ink);
+    font-family: var(--edu-font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--edu-ink);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+a { color: var(--edu-primary); text-decoration: none; }
+a:hover { color: var(--edu-primary-hover); }
+
+::selection { background: var(--edu-primary-tint); color: var(--edu-ink); }
+:focus-visible { outline: 2px solid var(--edu-primary); outline-offset: 2px; }
+
+/* ════════════════ Navbar ════════════════ */
+.navbar {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--edu-border);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+    color: var(--edu-ink) !important;
+    font-weight: 700;
+}
+
+.navbar .nav-link {
+    color: var(--edu-muted) !important;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: var(--edu-radius-sm);
+    transition: background 150ms ease, color 150ms ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--edu-ink) !important;
+    background: var(--edu-surface-2);
+}
+
+.navbar .nav-link.active {
+    color: var(--edu-primary) !important;
+    background: var(--edu-primary-tint);
+}
+
+.navbar-toggler { border-color: var(--edu-border); }
+
+/* ════════════════ Buttons ════════════════ */
+.btn {
+    border-radius: var(--edu-radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+.btn-primary {
+    --bs-btn-color: var(--edu-on-primary);
+    --bs-btn-bg: var(--edu-primary);
+    --bs-btn-border-color: var(--edu-primary);
+    --bs-btn-hover-color: var(--edu-on-primary);
+    --bs-btn-hover-bg: var(--edu-primary-hover);
+    --bs-btn-hover-border-color: var(--edu-primary-hover);
+    --bs-btn-active-color: var(--edu-on-primary);
+    --bs-btn-active-bg: var(--edu-primary-active);
+    --bs-btn-active-border-color: var(--edu-primary-active);
+}
+
+.btn-secondary {
+    --bs-btn-color: var(--edu-ink);
+    --bs-btn-bg: var(--edu-surface);
+    --bs-btn-border-color: var(--edu-border-strong);
+    --bs-btn-hover-color: var(--edu-ink);
+    --bs-btn-hover-bg: var(--edu-surface-2);
+    --bs-btn-hover-border-color: var(--edu-border-strong);
+}
+
+.btn-warning {
+    --bs-btn-color: var(--edu-primary);
+    --bs-btn-bg: var(--edu-surface);
+    --bs-btn-border-color: var(--edu-border-strong);
+    --bs-btn-hover-color: var(--edu-on-primary);
+    --bs-btn-hover-bg: var(--edu-primary);
+    --bs-btn-hover-border-color: var(--edu-primary);
+    --bs-btn-active-color: var(--edu-on-primary);
+    --bs-btn-active-bg: var(--edu-primary-hover);
+    --bs-btn-active-border-color: var(--edu-primary-hover);
+}
+
+.btn-info {
+    --bs-btn-color: var(--edu-primary);
+    --bs-btn-bg: var(--edu-surface);
+    --bs-btn-border-color: var(--edu-border-strong);
+    --bs-btn-hover-color: var(--edu-primary);
+    --bs-btn-hover-bg: var(--edu-primary-tint);
+    --bs-btn-hover-border-color: var(--edu-border-strong);
+}
+
+.btn-danger {
+    --bs-btn-color: #dc3545;
+    --bs-btn-bg: var(--edu-surface);
+    --bs-btn-border-color: #f1c4c9;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #dc3545;
+    --bs-btn-hover-border-color: #dc3545;
+}
+
+.btn-link { color: var(--edu-primary); }
+
+/* ════════════════ Cards ════════════════ */
+.card {
+    background: var(--edu-surface);
+    border: 1px solid var(--edu-border);
+    border-radius: var(--edu-radius-md);
+    box-shadow: var(--edu-shadow-sm);
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+    border-color: var(--edu-border-strong);
+    box-shadow: var(--edu-shadow-md);
+}
+
+.card-title { color: var(--edu-ink); font-weight: 700; }
+
+/* ════════════════ Tables ════════════════ */
+.table-card {
+    background: var(--edu-surface);
+    border: 1px solid var(--edu-border);
+    border-radius: var(--edu-radius-md);
+    box-shadow: var(--edu-shadow-sm);
+    overflow: hidden;
+}
+
+.table-card .table { margin-bottom: 0; }
+
+.table thead th {
+    background: var(--edu-surface-2);
+    color: var(--edu-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    border-bottom: 1px solid var(--edu-border);
+    white-space: nowrap;
+    padding: 0.8rem 1rem;
+}
+
+.table tbody td {
+    border-color: var(--edu-border);
+    vertical-align: middle;
+    padding: 0.75rem 1rem;
+}
+
+.table tbody tr { transition: background 150ms ease; }
+.table tbody tr:hover { background: var(--edu-surface-2); }
+
+.table .action-cell { white-space: nowrap; }
+
+/* Kolom stabil — tidak geser saat ganti halaman */
+.table-fixed {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-fixed th,
+.table-fixed td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Kolom aksi jangan di-ellipsis/clip — tombol harus selalu terlihat */
+.table-fixed td.action-cell {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+/* Aksi rata kanan (tombol), header center */
+.table td.action-cell .d-flex { justify-content: flex-end; }
+
+/* ════════════════ Forms ════════════════ */
+.form-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--edu-ink);
+}
+
+.form-control, .form-select {
+    border: 1px solid var(--edu-border-strong);
+    border-radius: var(--edu-radius-sm);
+    background-color: var(--edu-surface);
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-control::placeholder { color: var(--edu-muted-2); }
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--edu-primary);
+    box-shadow: var(--edu-ring);
+}
+
+.form-control.is-invalid, .form-select.is-invalid { background-image: none; }
+
+.invalid-feedback { color: #dc3545; }
+
+/* ════════════════ Pagination ════════════════ */
+.pagination {
+    gap: 0.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.pagination .page-link {
+    border: 1px solid var(--edu-border-strong);
+    border-radius: var(--edu-radius-sm);
+    color: var(--edu-muted);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.75rem;
+    min-width: 34px;
+    text-align: center;
+    background: var(--edu-surface);
+    transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.pagination .page-link:hover {
+    background: var(--edu-surface-2);
+    color: var(--edu-ink);
+    border-color: var(--edu-border-strong);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--edu-primary);
+    border-color: var(--edu-primary);
+    color: var(--edu-on-primary);
+}
+
+.pagination .page-item.disabled .page-link {
+    background: var(--edu-surface-2);
+    color: var(--edu-muted-2);
+    border-color: var(--edu-border);
+}
+
+.pagination .page-item + .page-item { margin-left: 0; }
+
+/* ════════════════ Hero (beranda toko) ════════════════ */
+.hero {
+    padding: 3rem 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(2.25rem, 5.5vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 0;
+    max-width: 26ch;
+}
+
+.hero-highlight {
+    position: relative;
+    color: var(--edu-primary);
+    white-space: nowrap;
+}
+
+.hero-rule {
+    width: 64px;
+    height: 5px;
+    border: none;
+    border-radius: var(--edu-radius-pill);
+    background: linear-gradient(90deg, var(--edu-primary), var(--edu-primary-hover));
+    margin: 1.5rem auto 0;
+    opacity: 0.9;
+}
+
+.hero-subtitle {
+    color: var(--edu-muted);
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.75rem;
+    max-width: 52ch;
+}
+
+/* ════════════════ Product detail ════════════════ */
+.detail-title { font-size: 1.625rem; margin-bottom: 0.5rem; }
+.detail-price {
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--edu-ink);
+}
+
+/* ════════════════ Alerts ════════════════ */
+.alert-success {
+    background: #eef7f1;
+    color: var(--edu-primary);
+    border-color: #d5ebdd;
+}
+
+/* ════════════════ Misc ════════════════ */
+.text-muted { color: var(--edu-muted) !important; }
