@@ -12,17 +12,19 @@ class Product extends Model
      */
     protected $fillable = [
         'name',
-        'desc',
-        'price',
+        'slug',
+        'description',
+        'image',
         'stock',
-        'category_id',
+        'price',
+        'product_category_id',
     ];
 
     /**
      * Produk dimiliki oleh satu kategori.
      */
-    public function category(): BelongsTo
+    public function productCategory(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(ProductCategory::class);
     }
 }

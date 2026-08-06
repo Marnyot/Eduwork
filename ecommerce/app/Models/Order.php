@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
@@ -11,11 +12,14 @@ class Order extends Model
      * Kolom yang boleh diisi secara massal (mass assignment).
      */
     protected $fillable = [
-        'user_id',
-        'product_id',
-        'quantity',
-        'total',
+        'order_number',
+        'customer_name',
+        'customer_phone',
+        'customer_address',
+        'total_amount',
         'status',
+        'payment_method',
+        'user_id',
     ];
 
     /**
@@ -27,10 +31,10 @@ class Order extends Model
     }
 
     /**
-     * Order merujuk pada satu produk.
+     * Order memiliki banyak item.
      */
-    public function product(): BelongsTo
+    public function orderItems(): HasMany
     {
-        return $this->belongsTo(Product::class);
+        return $this->hasMany(OrderItem::class);
     }
 }
