@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
+use App\Models\ProductCategory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CategorySeeder extends Seeder
+class ProductCategorySeeder extends Seeder
 {
     use WithoutModelEvents;
 
@@ -25,7 +25,7 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            Category::query()->updateOrCreate(['slug' => $category['slug']], $category);
+            ProductCategory::query()->updateOrCreate(['slug' => $category['slug']], $category);
         }
     }
 }
