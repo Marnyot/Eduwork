@@ -15,7 +15,7 @@ class ProductCard extends Component
         public string $title = 'Product Title',
         public string $description = 'Product Description',
         public string $image = 'https://via.placeholder.com/150',
-        public string $link = '#'
+        public string $slug = '#'
     ) {
         //
     }

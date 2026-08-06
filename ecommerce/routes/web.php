@@ -3,7 +3,6 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -30,11 +29,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-// Resource untuk modul Produk
-Route::resource('products', ProductController::class)->except(['index']);
+// Detail produk by slug
+Route::get('/product/{slug}', [ProductController::class, 'show'])->name('products.show');
 
-// Resource untuk modul Halaman
-Route::resource('pages', PageController::class);
+// Resource untuk modul Produk
+Route::resource('products', ProductController::class)->except(['index', 'show']);
 
 // ===== Area Admin (sementara tanpa role, hanya dipisah) =====
 Route::prefix('admin')->name('admin.')->group(function () {

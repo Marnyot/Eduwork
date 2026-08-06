@@ -14,8 +14,7 @@ class HomeController extends Controller
     {
         $products = Product::query()
             ->orderByDesc('id')
-            ->take(8)
-            ->get();
+            ->paginate(8);
 
         return view('home', compact('products'));
     }

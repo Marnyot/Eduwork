@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -26,7 +27,9 @@ class ProductController extends Controller
      */
     public function create(): View
     {
-        return view('products.create');
+        $categories = ProductCategory::orderBy('name')->get();
+
+        return view('products.create', compact('categories'));
     }
 
     /**
@@ -36,7 +39,12 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:products,slug'],
+            'description' => ['required', 'string'],
+            'image' => ['required', 'string', 'max:255'],
+            'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
+            'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
 
         Product::create($data);
@@ -50,9 +58,19 @@ class ProductController extends Controller
      * Menampilkan detail satu produk (READ - detail).
      * 404 otomatis dikembalikan bila produk tidak ditemukan.
      */
-    public function show(Product $product): View
+    public function show(string $slug): View
     {
-        return view('products.show', compact('product'));
+        $product = Product::where('slug', $slug)
+            ->with('productCategory')
+            ->firstOrFail();
+
+        $productRecommendations = Product::where('product_category_id', $product->product_category_id)
+            ->where('id', '!=', $product->id)
+            ->inRandomOrder()
+            ->take(4)
+            ->get();
+
+        return view('products.show', compact('product', 'productRecommendations'));
     }
 
     /**
@@ -60,7 +78,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product): View
     {
-        return view('products.edit', compact('product'));
+        $categories = ProductCategory::orderBy('name')->get();
+
+        return view('products.edit', compact('product', 'categories'));
     }
 
     /**
@@ -70,7 +90,15 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'slug' => [
+                'required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
+                'unique:products,slug,'.$product->id,
+            ],
+            'description' => ['required', 'string'],
+            'image' => ['required', 'string', 'max:255'],
+            'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
+            'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
 
         $product->update($data);

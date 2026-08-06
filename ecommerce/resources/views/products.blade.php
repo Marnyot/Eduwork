@@ -11,7 +11,8 @@
                 <x-product-card
                     :title="$product->name"
                     :description="'Rp ' . number_format($product->price, 0, ',', '.')"
-                    link="{{ route('products.public') }}"
+                    :image="$product->image"
+                    :slug="$product->slug"
                 />
             </div>
         @empty

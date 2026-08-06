@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\ProductCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index(): View
     {
-        $categories = Category::query()
+        $categories = ProductCategory::query()
             ->orderByDesc('id')
             ->paginate(10);
 
@@ -37,10 +37,10 @@ class CategoryController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:categories,slug'],
+            'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:product_categories,slug'],
         ]);
 
-        Category::create($data);
+        ProductCategory::create($data);
 
         return redirect()
             ->route('admin.categories.index')
@@ -50,7 +50,7 @@ class CategoryController extends Controller
     /**
      * Menampilkan form untuk mengubah kategori yang sudah ada.
      */
-    public function edit(Category $category): View
+    public function edit(ProductCategory $category): View
     {
         return view('admin.categories.edit', compact('category'));
     }
@@ -58,13 +58,13 @@ class CategoryController extends Controller
     /**
      * Memperbarui data kategori yang sudah ada (UPDATE).
      */
-    public function update(Request $request, Category $category): RedirectResponse
+    public function update(Request $request, ProductCategory $category): RedirectResponse
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'slug' => [
                 'required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
-                'unique:categories,slug,'.$category->id,
+                'unique:product_categories,slug,'.$category->id,
             ],
         ]);
 
@@ -78,7 +78,7 @@ class CategoryController extends Controller
     /**
      * Menghapus kategori dari database (DELETE).
      */
-    public function destroy(Category $category): RedirectResponse
+    public function destroy(ProductCategory $category): RedirectResponse
     {
         $category->delete();
 

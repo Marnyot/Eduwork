@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -28,7 +28,7 @@ class ProductController extends Controller
      */
     public function create(): View
     {
-        $categories = Category::orderBy('name')->get();
+        $categories = ProductCategory::orderBy('name')->get();
 
         return view('admin.products.create', compact('categories'));
     }
@@ -40,8 +40,12 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:products,slug'],
+            'description' => ['required', 'string'],
+            'image' => ['required', 'string', 'max:255'],
+            'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
-            'category_id' => ['nullable', 'exists:categories,id'],
+            'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
 
         Product::create($data);
@@ -65,7 +69,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product): View
     {
-        $categories = Category::orderBy('name')->get();
+        $categories = ProductCategory::orderBy('name')->get();
 
         return view('admin.products.edit', compact('product', 'categories'));
     }
@@ -77,8 +81,15 @@ class ProductController extends Controller
     {
         $data = $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'slug' => [
+                'required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
+                'unique:products,slug,'.$product->id,
+            ],
+            'description' => ['required', 'string'],
+            'image' => ['required', 'string', 'max:255'],
+            'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
-            'category_id' => ['nullable', 'exists:categories,id'],
+            'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
 
         $product->update($data);
