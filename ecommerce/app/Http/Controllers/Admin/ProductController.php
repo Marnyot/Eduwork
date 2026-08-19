@@ -7,6 +7,8 @@ use App\Models\Product;
 use App\Models\ProductCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class ProductController extends Controller
@@ -56,11 +58,13 @@ class ProductController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:products,slug'],
             'description' => ['required', 'string'],
-            'image' => ['required', 'string', 'max:255'],
+            'image' => ['required', 'string', $this->croppedImageRule()],
             'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
             'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
+
+        $data['image'] = $this->storeCroppedImage($data['image']);
 
         Product::create($data);
 
@@ -100,11 +104,18 @@ class ProductController extends Controller
                 'unique:products,slug,'.$product->id,
             ],
             'description' => ['required', 'string'],
-            'image' => ['required', 'string', 'max:255'],
+            'image' => ['nullable', 'string', $this->croppedImageRule()],
             'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
             'product_category_id' => ['required', 'exists:product_categories,id'],
         ]);
+
+        if (! empty($data['image'])) {
+            $this->deleteUploadedImage($product->image);
+            $data['image'] = $this->storeCroppedImage($data['image']);
+        } else {
+            unset($data['image']);
+        }
 
         $product->update($data);
 
@@ -118,10 +129,59 @@ class ProductController extends Controller
      */
     public function destroy(Product $product): RedirectResponse
     {
+        $this->deleteUploadedImage($product->image);
+
         $product->delete();
 
         return redirect()
             ->route('admin.products.index')
             ->with('success', 'Produk berhasil dihapus.');
+    }
+
+    /**
+     * Validasi bahwa nilai yang dikirim adalah base64 data URI gambar yang valid.
+     */
+    private function croppedImageRule(): \Closure
+    {
+        return function (string $attribute, mixed $value, \Closure $fail): void {
+            if (! $value) {
+                return;
+            }
+
+            if (! str_starts_with($value, 'data:image/')) {
+                $fail('Upload dan crop gambar produk terlebih dahulu.');
+
+                return;
+            }
+
+            $binary = base64_decode(substr($value, strpos($value, ',') + 1) ?: '', true);
+
+            if ($binary === false || @getimagesizefromstring($binary) === false) {
+                $fail('File yang diupload bukan gambar yang valid.');
+            }
+        };
+    }
+
+    /**
+     * Decode base64 data URI hasil crop dan simpan sebagai file di storage publik.
+     */
+    private function storeCroppedImage(string $dataUri): string
+    {
+        $binary = base64_decode(substr($dataUri, strpos($dataUri, ',') + 1));
+
+        $path = 'products/'.Str::uuid().'.jpg';
+        Storage::disk('public')->put($path, $binary);
+
+        return 'storage/'.$path;
+    }
+
+    /**
+     * Hapus file gambar hasil upload sebelumnya (bukan aset seed statis).
+     */
+    private function deleteUploadedImage(?string $path): void
+    {
+        if ($path && str_starts_with($path, 'storage/products/')) {
+            Storage::disk('public')->delete(Str::after($path, 'storage/'));
+        }
     }
 }
