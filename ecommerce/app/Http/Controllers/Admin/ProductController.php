@@ -14,11 +14,25 @@ class ProductController extends Controller
     /**
      * Menampilkan daftar semua produk (READ - list).
      */
-    public function index(): View
+    public function index(Request $request): View
     {
-        $products = Product::query()
-            ->orderByDesc('id')
-            ->paginate(10);
+        $products = Product::query()->with('productCategory');
+
+        if ($request->filled('search')) {
+            $keyword = '%'.$request->search.'%';
+            $products->where(function ($query) use ($keyword) {
+                $query->where('name', 'like', $keyword)
+                    ->orWhereHas('productCategory', fn ($q) => $q->where('name', 'like', $keyword));
+            });
+        }
+
+        $sortable = ['name' => 'name', 'price' => 'price', 'stock' => 'stock'];
+        [$column, $direction] = explode('_', $request->get('sort', 'id_asc'), 2) + ['id', 'asc'];
+
+        $products = $products
+            ->orderBy($sortable[$column] ?? 'id', $direction === 'asc' ? 'asc' : 'desc')
+            ->paginate(10)
+            ->withQueryString();
 
         return view('admin.products.index', compact('products'));
     }

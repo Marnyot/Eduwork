@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('admin.layout')
 
 @section('title', 'Admin - Daftar Kategori')
 
@@ -15,7 +15,8 @@
                 <tr>
                     <th style="width: 60px">ID</th>
                     <th style="width: 200px">Nama</th>
-                    <th style="width: 220px">Slug</th>
+                    <th style="width: 200px">Slug</th>
+                    <th style="width: 100px">Produk</th>
                     <th style="width: 180px" class="text-center">Aksi</th>
                 </tr>
             </thead>
@@ -25,6 +26,9 @@
                         <td>{{ $category->id }}</td>
                         <td title="{{ $category->name }}">{{ $category->name }}</td>
                         <td title="{{ $category->slug }}">{{ $category->slug }}</td>
+                        <td>
+                            <a href="{{ route('admin.products.index', ['search' => $category->name]) }}">{{ $category->products_count }}</a>
+                        </td>
                         <td class="action-cell">
                             <div class="d-flex gap-2">
                                 <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-sm btn-warning">Ubah</a>
@@ -38,7 +42,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4" class="text-center">Belum ada kategori.</td>
+                        <td colspan="5" class="text-center">Belum ada kategori.</td>
                     </tr>
                 @endforelse
             </tbody>
