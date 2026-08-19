@@ -12,12 +12,15 @@
   <body style="background: var(--edu-surface-2);">
     <nav class="navbar navbar-expand-lg admin-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="{{ route('admin.products.index') }}">MyEcommerce <span class="fw-normal text-muted">Admin</span></a>
+        <a class="navbar-brand fw-bold" href="{{ route('admin.dashboard') }}">MyEcommerce <span class="fw-normal text-muted">Admin</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="adminNav">
           <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link {{ request()->routeIs('admin.products.*') ? 'active' : '' }}" href="{{ route('admin.products.index') }}">Produk</a>
             </li>
@@ -33,7 +36,7 @@
               <span class="text-muted small">{{ Auth::user()->name }}</span>
               <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="btn btn-sm btn-secondary">Keluar</button>
+                <button type="submit" class="btn btn-sm btn-secondary btn-logout">Keluar</button>
               </form>
             </li>
           </ul>
@@ -51,6 +54,8 @@
     <main class="container py-4">
       @yield('content')
     </main>
+
+    @stack('scripts')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>

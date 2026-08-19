@@ -1,8 +1,11 @@
 import Alpine from 'alpinejs';
 import Cropper from 'cropperjs';
 import 'cropperjs/dist/cropper.css';
+import { Chart, registerables } from 'chart.js';
 
+Chart.register(...registerables);
 window.Alpine = Alpine;
+window.Chart = Chart;
 
 Alpine.data('imageCropper', ({ current, aspect }) => ({
     cropped: null,

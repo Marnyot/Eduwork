@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -54,6 +55,9 @@ Route::resource('products', ProductController::class)->except(['index', 'show'])
 
 // ===== Area Admin (sementara tanpa role, hanya dipisah) =====
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+    // Ringkasan statistik
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
     // CRUD Produk Admin
     Route::resource('products', AdminProductController::class);
 

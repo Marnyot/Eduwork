@@ -81,6 +81,24 @@ a:hover { color: var(--edu-primary-hover); }
     padding-bottom: 0.6rem;
 }
 
+.btn-logout:hover,
+.btn-logout:focus {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--edu-radius-sm);
+    background: var(--edu-primary-tint);
+    color: var(--edu-primary);
+}
+
 .image-drop-zone {
     position: relative;
     display: flex;
