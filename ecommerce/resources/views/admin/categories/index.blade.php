@@ -9,13 +9,14 @@
     </div>
 
     <div class="table-card">
-        <table class="table align-middle mb-0 table-fixed">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0 table-fixed">
             <thead>
                 <tr>
-                    <th style="width: 8%">ID</th>
-                    <th style="width: 40%">Nama</th>
-                    <th style="width: 32%">Slug</th>
-                    <th class="text-center" style="width: 20%">Aksi</th>
+                    <th style="width: 60px">ID</th>
+                    <th style="width: 200px">Nama</th>
+                    <th style="width: 220px">Slug</th>
+                    <th style="width: 180px" class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                 @endforelse
             </tbody>
         </table>
+        </div>
     </div>
 
     {{ $categories->links('pagination::bootstrap-5') }}

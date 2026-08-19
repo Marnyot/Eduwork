@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -13,9 +14,20 @@ class HomeController extends Controller
     public function index(): View
     {
         $products = Product::query()
+            ->with('productCategory')
             ->orderByDesc('id')
-            ->paginate(8);
+            ->take(8)
+            ->get();
 
-        return view('home', compact('products'));
+        $categories = ProductCategory::withCount('products')
+            ->orderBy('name')
+            ->get();
+
+        return view('home', [
+            'products' => $products,
+            'categories' => $categories,
+            'productCount' => Product::count(),
+            'categoryCount' => $categories->count(),
+        ]);
     }
 }

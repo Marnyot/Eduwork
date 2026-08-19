@@ -9,14 +9,15 @@
     </div>
 
     <div class="table-card">
-        <table class="table align-middle mb-0 table-fixed">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0 table-fixed">
             <thead>
                 <tr>
-                    <th style="width: 6%">ID</th>
-                    <th style="width: 46%">Nama</th>
-                    <th style="width: 16%">Harga</th>
-                    <th style="width: 20%">Kategori</th>
-                    <th class="text-center" style="width: 12%">Aksi</th>
+                    <th style="width: 60px">ID</th>
+                    <th style="width: 320px">Nama</th>
+                    <th style="width: 120px">Harga</th>
+                    <th style="width: 160px">Kategori</th>
+                    <th style="width: 250px" class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +46,7 @@
                 @endforelse
             </tbody>
         </table>
+        </div>
     </div>
 
     {{ $products->links('pagination::bootstrap-5') }}
