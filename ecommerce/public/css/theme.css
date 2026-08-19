@@ -73,6 +73,14 @@ a:hover { color: var(--edu-primary-hover); }
     padding-bottom: 0.75rem;
 }
 
+/* Admin: flat, no blur/glass, no dots — internal tool, not storefront */
+.admin-navbar {
+    background: var(--edu-surface) !important;
+    border-bottom: 1px solid var(--edu-border);
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
 .navbar-brand {
     color: var(--edu-ink) !important;
     font-weight: 700;
@@ -235,16 +243,6 @@ a:hover { color: var(--edu-primary-hover); }
 .table-responsive .table-fixed {
     min-width: 950px;
 }
-.table-details {
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    .table-details {
-        width: 50%;
-    }
-}
-
 /* Aksi rata kanan (tombol), header center */
 .table td.action-cell .d-flex { justify-content: flex-end; }
 

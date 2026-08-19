@@ -53,7 +53,7 @@ Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product
 Route::resource('products', ProductController::class)->except(['index', 'show']);
 
 // ===== Area Admin (sementara tanpa role, hanya dipisah) =====
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     // CRUD Produk Admin
     Route::resource('products', AdminProductController::class);
 

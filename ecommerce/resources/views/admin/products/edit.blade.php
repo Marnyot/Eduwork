@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('admin.layout')
 
 @section('title', 'Admin - Ubah Produk')
 
