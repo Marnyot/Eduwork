@@ -9,10 +9,9 @@
                 @auth
                     <span class="hero-eyebrow">Selamat datang kembali</span>
                     <h1 class="hero-title">Halo, {{ explode(' ', Auth::user()->name)[0] }}. Mau lihat apa hari ini?</h1>
-                    <p class="hero-subtitle">Produk terbaru sudah menunggu, atau lanjut kelola katalog toko dari sini.</p>
+                    <p class="hero-subtitle">Produk terbaru sudah menunggu.</p>
                     <div class="d-flex flex-wrap gap-2">
                         <a href="{{ route('products.public') }}" class="btn btn-primary btn-lg">Lihat Produk</a>
-                        <a href="{{ route('admin.products.index') }}" class="btn btn-secondary btn-lg">Kelola Produk</a>
                     </div>
                 @else
                     <span class="hero-eyebrow">Toko online kebutuhan sehari-hari</span>
