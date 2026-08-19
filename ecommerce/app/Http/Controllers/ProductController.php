@@ -64,6 +64,8 @@ class ProductController extends Controller
             ->with('productCategory')
             ->firstOrFail();
 
+        $product->increment('clicks');
+
         $productRecommendations = Product::where('product_category_id', $product->product_category_id)
             ->where('id', '!=', $product->id)
             ->inRandomOrder()
