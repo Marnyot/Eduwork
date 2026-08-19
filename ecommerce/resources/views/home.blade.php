@@ -16,7 +16,7 @@
                 @else
                     <span class="hero-eyebrow">Toko online kebutuhan sehari-hari</span>
                     <h1 class="hero-title">Belanja alat tulis sampai elektronik, satu tempat.</h1>
-                    <p class="hero-subtitle">Eduwork punya {{ $productCount }} produk dari {{ $categoryCount }} kategori, harga jelas dari awal, tanpa perlu tanya dulu.</p>
+                    <p class="hero-subtitle">MyEcommerce punya {{ $productCount }} produk dari {{ $categoryCount }} kategori, harga jelas dari awal, tanpa perlu tanya dulu.</p>
 
                     <form action="{{ route('products.public') }}" method="GET" class="hero-search">
                         <label for="hero-search" class="visually-hidden">Cari produk</label>
@@ -35,7 +35,7 @@
                         <div class="hero-visual-glow"></div>
                         <div class="hero-visual-mark">
                             <x-application-logo class="hero-visual-logo" />
-                            <span>Eduwork Store</span>
+                            <span>MyEcommerce</span>
                         </div>
                         <p class="hero-visual-tagline">Dari alat tulis sampai elektronik, satu keranjang.</p>
                     </div>

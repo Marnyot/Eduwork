@@ -2,7 +2,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
       <x-application-logo style="width: 1.75rem; height: 1.75rem;" />
-      Eduwork
+      MyEcommerce
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>

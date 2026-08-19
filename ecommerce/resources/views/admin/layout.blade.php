@@ -11,7 +11,7 @@
   <body style="background: var(--edu-surface-2);">
     <nav class="navbar navbar-expand-lg admin-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="{{ route('admin.products.index') }}">Eduwork <span class="fw-normal text-muted">Admin</span></a>
+        <a class="navbar-brand fw-bold" href="{{ route('admin.products.index') }}">MyEcommerce <span class="fw-normal text-muted">Admin</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav">
           <span class="navbar-toggler-icon"></span>
         </button>
