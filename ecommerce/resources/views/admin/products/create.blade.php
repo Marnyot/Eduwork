@@ -45,11 +45,10 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">Gambar (URL/path)</label>
-            <input type="text" name="image" id="image" class="form-control @error('image') is-invalid @enderror"
-                   value="{{ old('image', '/images/products/asics.avif') }}">
+            <label class="form-label">Gambar</label>
+            <x-image-upload-cropper name="image" required />
             @error('image')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback d-block">{{ $message }}</div>
             @enderror
         </div>
 

@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
+    @vite(['resources/js/app.js'])
   </head>
   <body style="background: var(--edu-surface-2);">
     <nav class="navbar navbar-expand-lg admin-navbar">
@@ -50,5 +51,7 @@
     <main class="container py-4">
       @yield('content')
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

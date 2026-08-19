@@ -15,12 +15,9 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.products.update', $product) }}" method="POST">
+    <form action="{{ route('admin.products.update', $product) }}" method="POST" class="w-50">
         @csrf
         @method('PUT')
-
-        <div class="row">
-        <div class="col-md-8">
 
         <div class="mb-3">
             <label for="name" class="form-label">Nama</label>
@@ -49,11 +46,10 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">Gambar (URL/path)</label>
-            <input type="text" name="image" id="image" class="form-control @error('image') is-invalid @enderror"
-                   value="{{ old('image', $product->image) }}">
+            <label class="form-label">Gambar</label>
+            <x-image-upload-cropper name="image" :current="$product->image" required />
             @error('image')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback d-block">{{ $message }}</div>
             @enderror
         </div>
 
@@ -92,34 +88,5 @@
 
         <button type="submit" class="btn btn-primary">Simpan</button>
         <a href="{{ route('admin.products.index') }}" class="btn btn-secondary">Batal</a>
-
-        </div>
-
-        <div class="col-md-4 d-none d-md-block">
-            <div class="card">
-                <div class="card-header">Preview</div>
-                <div class="card-body">
-                    <img id="image-preview" src="{{ asset($product->image) }}" class="img-fluid" alt="Preview">
-                </div>
-            </div>
-        </div>
-        </div>
     </form>
-
-    <script>
-        const preview = document.getElementById('image-preview');
-        const input = document.getElementById('image');
-        const baseUrl = @json(url('/'));
-
-        const updatePreview = () => {
-            const value = input.value.trim();
-            if (!value) {
-                preview.removeAttribute('src');
-                return;
-            }
-            preview.src = /^https?:\/\//i.test(value) ? value : baseUrl + '/' + value.replace(/^\//, '');
-        };
-
-        input.addEventListener('input', updatePreview);
-    </script>
 @endsection
