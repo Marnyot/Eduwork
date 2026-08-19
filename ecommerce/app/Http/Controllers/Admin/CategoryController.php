@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index(): View
     {
         $categories = ProductCategory::withCount('products')
-            ->orderByDesc('id')
+            ->orderBy('id')
             ->paginate(10);
 
         return view('admin.categories.index', compact('categories'));
