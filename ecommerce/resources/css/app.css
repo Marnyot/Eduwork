@@ -1,9 +1,30 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* ═════════ Breeze brand overrides (hijau Eduwork) ═════════ */
+body {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Checkbox "remember me" */
+.text-indigo-600 { color: #2f855a; }
+
+/* Focus ring leftover */
+.focus\:ring-indigo-500:focus,
+.focus\:ring-indigo-600:focus {
+    --tw-ring-color: #2f855a;
+}
+
+/* Nav link accent (desktop & responsive) */
+.border-indigo-300 { border-color: #a7d4bb; }
+.border-indigo-400 { border-color: #83c0a2; }
+.border-indigo-600 { border-color: #2f855a; }
+.border-indigo-700 { border-color: #1f5d3f; }
+.text-indigo-200 { color: #a7d4bb; }
+.text-indigo-300 { color: #83c0a2; }
+.text-indigo-700 { color: #276749; }
+.text-indigo-800 { color: #1f5d3f; }
+.bg-indigo-50 { background-color: #eaf5ee; }
+.bg-indigo-100 { background-color: #d5ebdd; }
+.bg-indigo-900 { background-color: #1f5d3f; }
