@@ -53,8 +53,8 @@ Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product
 // Resource untuk modul Produk
 Route::resource('products', ProductController::class)->except(['index', 'show']);
 
-// ===== Area Admin (sementara tanpa role, hanya dipisah) =====
-Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+// ===== Area Admin =====
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
     // Ringkasan statistik
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
