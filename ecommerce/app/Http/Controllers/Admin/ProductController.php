@@ -55,9 +55,9 @@ class ProductController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'min:3', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:products,slug'],
-            'description' => ['required', 'string'],
+            'description' => ['required', 'string', 'min:10', 'max:1000'],
             'image' => ['required', 'string', $this->croppedImageRule()],
             'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],
@@ -98,12 +98,12 @@ class ProductController extends Controller
     public function update(Request $request, Product $product): RedirectResponse
     {
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'min:3', 'max:255'],
             'slug' => [
                 'required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
                 'unique:products,slug,'.$product->id,
             ],
-            'description' => ['required', 'string'],
+            'description' => ['required', 'string', 'min:10', 'max:1000'],
             'image' => ['nullable', 'string', $this->croppedImageRule()],
             'stock' => ['required', 'integer', 'min:0'],
             'price' => ['required', 'integer', 'min:0'],

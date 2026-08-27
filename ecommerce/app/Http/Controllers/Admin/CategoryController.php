@@ -37,7 +37,7 @@ class CategoryController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'min:3', 'max:255', 'unique:product_categories,name'],
             'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:product_categories,slug'],
         ]);
 
@@ -62,7 +62,10 @@ class CategoryController extends Controller
     public function update(Request $request, ProductCategory $category): RedirectResponse
     {
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => [
+                'required', 'string', 'min:3', 'max:255',
+                'unique:product_categories,name,'.$category->id,
+            ],
             'slug' => [
                 'required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
                 'unique:product_categories,slug,'.$category->id,
