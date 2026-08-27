@@ -93,6 +93,10 @@ class CategoryController extends Controller
      */
     public function destroy(ProductCategory $category): RedirectResponse
     {
+        if ($category->products()->exists()) {
+            return back()->withErrors(['name' => 'Kategori tidak bisa dihapus karena masih punya produk.']);
+        }
+
         $category->delete();
 
         return redirect()
