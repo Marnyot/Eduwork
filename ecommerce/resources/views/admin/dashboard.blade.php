@@ -58,7 +58,10 @@
 
     <div class="card">
         <div class="card-body">
-            <h2 class="h6 mb-3">Order Terbaru</h2>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h6 mb-0">Order Terbaru</h2>
+                <a href="{{ route('admin.orders.index') }}" class="small">Lihat semua &rarr;</a>
+            </div>
             <div class="table-responsive">
                 <table class="table align-middle mb-0">
                     <thead>

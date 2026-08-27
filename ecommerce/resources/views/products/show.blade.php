@@ -17,7 +17,16 @@
                 <p>{{ $product->description }}</p>
                 <p class="detail-price">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
                 <p>Kategori: {{ $product->productCategory->name }}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <p>
+                    <span class="badge text-bg-{{ $inStock ? 'success' : 'secondary' }}">
+                        {{ $inStock ? 'Stok tersedia (' . $product->stock . ')' : 'Stok habis' }}
+                    </span>
+                </p>
+                @if ($inStock)
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                @else
+                    <button type="button" class="btn btn-secondary" disabled>Stok Habis</button>
+                @endif
             </div>
         </div>
 

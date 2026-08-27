@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/products', function (Request $request) {
-    $query = Product::query()->with('productCategory');
+    $query = Product::query()->with('productCategory')->where('stock', '>', 0);
 
     if ($request->filled('search')) {
         $keyword = '%'.$request->search.'%';
@@ -63,6 +64,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
     // CRUD Kategori Produk
     Route::resource('categories', CategoryController::class);
+
+    // Kelola Order
+    Route::resource('orders', AdminOrderController::class)->only(['index', 'destroy']);
 });
 
 // ===== Auth (Breeze) =====

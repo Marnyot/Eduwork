@@ -68,11 +68,14 @@ class ProductController extends Controller
 
         $productRecommendations = Product::where('product_category_id', $product->product_category_id)
             ->where('id', '!=', $product->id)
+            ->where('stock', '>', 0)
             ->inRandomOrder()
             ->take(4)
             ->get();
 
-        return view('products.show', compact('product', 'productRecommendations'));
+        $inStock = $product->stock > 0;
+
+        return view('products.show', compact('product', 'productRecommendations', 'inStock'));
     }
 
     /**

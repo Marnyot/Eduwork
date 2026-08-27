@@ -27,6 +27,9 @@
             <li class="nav-item">
               <a class="nav-link {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}" href="{{ route('admin.categories.index') }}">Kategori</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link {{ request()->routeIs('admin.orders.*') ? 'active' : '' }}" href="{{ route('admin.orders.index') }}">Order</a>
+            </li>
           </ul>
           <ul class="navbar-nav align-items-lg-center gap-lg-3">
             <li class="nav-item">

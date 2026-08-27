@@ -15,6 +15,7 @@ class HomeController extends Controller
     {
         $products = Product::query()
             ->with('productCategory')
+            ->where('stock', '>', 0)
             ->orderByDesc('id')
             ->take(8)
             ->get();
