@@ -29,9 +29,9 @@
         </div>
 
         <div class="mb-3">
-            <label for="slug" class="form-label">Slug</label>
+            <label for="slug" class="form-label">Slug <span class="text-muted fw-normal">(opsional)</span></label>
             <input type="text" name="slug" id="slug" class="form-control @error('slug') is-invalid @enderror"
-                   value="{{ old('slug', $category->slug) }}">
+                   value="{{ old('slug', $category->slug) }}" placeholder="Kosongkan untuk generate otomatis dari nama">
             @error('slug')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

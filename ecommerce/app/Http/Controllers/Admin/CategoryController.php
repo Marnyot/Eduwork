@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ProductCategory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class CategoryController extends Controller
@@ -36,6 +37,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $request->merge([
+            'slug' => Str::slug($request->filled('slug') ? $request->slug : $request->name),
+        ]);
+
         $data = $request->validate([
             'name' => ['required', 'string', 'min:3', 'max:255', 'unique:product_categories,name'],
             'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:product_categories,slug'],
@@ -61,6 +66,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, ProductCategory $category): RedirectResponse
     {
+        $request->merge([
+            'slug' => Str::slug($request->filled('slug') ? $request->slug : $request->name),
+        ]);
+
         $data = $request->validate([
             'name' => [
                 'required', 'string', 'min:3', 'max:255',

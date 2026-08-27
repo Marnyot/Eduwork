@@ -54,6 +54,10 @@ class ProductController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $request->merge([
+            'slug' => Str::slug($request->filled('slug') ? $request->slug : $request->name),
+        ]);
+
         $data = $request->validate([
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:products,slug'],
@@ -97,6 +101,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product): RedirectResponse
     {
+        $request->merge([
+            'slug' => Str::slug($request->filled('slug') ? $request->slug : $request->name),
+        ]);
+
         $data = $request->validate([
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'slug' => [
